@@ -2,7 +2,6 @@ import axios from 'axios';
 export const shortenUrl = async (longUrl) => {
   console.log(import.meta.env.VITE_BackEnd_API);
   const response = await axios.post(import.meta.env.VITE_BackEnd_API+'/shorten',{longUrl},{withCredentials:true});
-  console.log(response);
   return response.data;
 };
 export const login = async (email,password) => {
